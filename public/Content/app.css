@@ -1,0 +1,43 @@
+/*  
+    Filename: app.css
+    Name: Yuna Jung
+    ID: 300972062
+    Date: June 11 2022
+*/
+
+.navbar-custom {
+    background-color: #1A1A1A;
+}
+
+.margin {
+    padding: 20px;
+    margin-bottom: 500px;
+}
+
+.container {
+    padding: 30px;
+}
+
+.bgGreen {
+    background-color: #76D57B;
+}
+
+.bgBlack {
+    background-color: #131212;
+}
+
+.lineHeight {
+    line-height:30px;
+}
+
+#box {
+	width: 96%;
+	margin-right: auto;
+	margin-left: auto;
+	border: medium solid white;
+	border-radius: 15px;
+    padding: 20px;
+	padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+	}

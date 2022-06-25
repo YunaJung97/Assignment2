@@ -1,0 +1,41 @@
+<%- include('../partials/header.ejs'); -%>
+
+    <%- include('../partials/main_nav.ejs'); -%>
+    <div class="margin container">
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+            <h1 class="text-center">Business Contacts</h1><br>
+            <table class="table table-bordered table-striped table-hover"> 
+                <tr>
+                    <th>Contact Name</th>
+                    <th>Contact Number</th>
+                    <th>Email Address</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <% for (let count=0; count < ContactList.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><%= ContactList[count].name %></td>
+                        <td class="text-center">
+                            <%= ContactList[count].number %>
+                        </td>
+                        <td class="text-center">
+                            <%= ContactList[count].email %>
+                        </td>
+                        <td class="text-center">
+                            <a href="/businesscontact/edit/<%= ContactList[count]._id %> " class="btn btn-outline-dark btn-sm" role="button">Update</a>
+                        </td>
+                        <td class="text-center">
+                            <a href="/businesscontact/delete/<%= ContactList[count]._id %> " class="btn btn-outline-danger btn-sm" role="button">Delete</a>
+                        </td>
+                    </tr>
+                    <%}%>
+            </table>
+            <br><br><br><br><br>
+        </div>
+    </div>
+</div>
+<%- include('../partials/bottom_nav.ejs'); -%>  
+
+<%- include('../partials/footer.ejs'); -%>
+  

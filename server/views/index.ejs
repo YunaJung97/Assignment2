@@ -1,0 +1,32 @@
+<%- include('partials/header.ejs'); -%>
+
+<%- include('partials/main_nav.ejs'); -%>
+  
+
+  <!-- Main Content -->
+  <main class="bgBlack">
+    <div class=" container jumbotron">
+      <h1 class="display-4"><%= title %></h1>
+      <% if(title == "Home") { %>
+       <%- include('partials/home'); -%>
+      <%} else if(title == "About") { %>
+        <%- include('partials/about') -%>
+       <%} else if(title == "Projects") { %>
+        <%- include('partials/projects'); -%>
+       <%} else if(title == "Services") { %>
+        <%- include('partials/services'); -%>
+       <%} else if(title == "Contact") { %>
+        <%- include('partials/contact'); -%>
+       <%}  
+       %>
+    </div>
+  </main>
+  
+<%- include('partials/bottom_nav.ejs'); -%>  
+
+<%- include('partials/footer.ejs'); -%>
+  
+
+
+
+
