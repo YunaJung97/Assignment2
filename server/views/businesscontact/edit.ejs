@@ -1,37 +1,38 @@
 <%- include('../partials/header.ejs'); -%>
-<div class="wrapper-container">
+
     <%- include('../partials/main_nav.ejs'); -%>
+    <div class="margin container">
     <div class="row">
         <div class="offset-md-2 col-md-8">
             <h1>Edit Contact<br>
     
             <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="nameTextField" >Contact Name:</label>
+                    <label for="nameTextField" ><h5>Contact Name:</h5></label>
                     <input type="text" class="form-control" id="nameTextField" placeholder="Enter contact name" name="name"
-                        value=<%=contacts.name %>
+                        value=<%=contact.name %>
                     required>
                 </div>
     
                 <div class="form-group">
-                    <label for="nameTextField" >Contact Number:</label>
+                    <label for="nameTextField" ><h5>Contact Number:</h5></label>
                     <input type="text" class="form-control " id="numberTextField" placeholder="Enter contact number"
-                        value=<%=contacts.number %>
+                        value=<%=contact.number %>
                     name="number"
     
                     required>
                 </div>
     
                 <div class="form-group">
-                    <label for="nameTextField" >Email Address:</label>
+                    <label for="nameTextField" ><h5>Email Address:</h5></label>
                     <input type="text" class="form-control " id="emailTextField" placeholder="Enter email address" name="email"
-                        value=<%=contacts.email %>
+                        value=<%=contact.email %>
                     required>
                 </div>
     
-                <button class="btn btn-primary " type="submit">Update</button>
-                <a href="/contacts" class="btn btn-secondary ">Cancel</a>
-                <a href="/contacts/delete<%= contacts.id %>" class="btn btn-danger">Delete</a>
+                <button class="btn btn-outline-primary " type="submit">Update</button>
+                <a href="/contacts" class="btn btn-outline-secondary ">Cancel</a>
+                <a href="/contacts/delete<%= contact.id %>" class="btn btn-outline-danger">Delete</a>
             </form>
         </div>
     </div>

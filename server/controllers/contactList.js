@@ -5,6 +5,12 @@
     Date: June 25 2022
 */
 
+let express = require('express');
+let router = express.Router();
+let mongoose = require('mongoose');
+
+let jwt = require('jsonwebtoken');
+
 let contacts = require("../models/contacts");
 
 module.exports.displayContactList = (req, res, next) => {
@@ -48,7 +54,7 @@ module.exports.processEditPage = (req, res, next) => {
     email: req.body.email,
   });
 
-  contacts.updateContact({ _id: id }, updatedContact, (err) => {
+  contacts.updateOne({ _id: id }, updatedContact, (err) => {
     if (err) {
       console.log(err);
       res.end(err);

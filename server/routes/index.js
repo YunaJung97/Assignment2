@@ -40,13 +40,18 @@ router.get('/contact', function(req, res, next) {
   res.render('index', { title: 'Contact'});
 });
 
-
-
-/* GET : endpoints to route to Logib */
+/* GET Login page. */
 router.get("/login", indexRouteController.displayLoginPage);
 router.post("/login", indexRouteController.processLoginPage);
 
-/* GET : endpoint to route to Logout */
+/* GET Logout page. */
 router.get("/logout", indexRouteController.processLogout);
+
+/* GET Route for displaying the Register page */
+router.get('/register', indexRouteController.displayRegisterPage);
+
+/* POST Route for processing the Register page */
+router.post('/register', indexRouteController.processRegisterPage);
+
 
 module.exports = router;
