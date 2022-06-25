@@ -1,3 +1,10 @@
+/*  
+    Filename: index.js
+    Name: Yuna Jung
+    ID: 300972062
+    Date: June 25 2022
+*/
+
 let passport = require("passport");
 let DB = require("../config/db");
 let user = require("../models/user");

@@ -1,3 +1,10 @@
+/*  
+    Filename: contactList.js
+    Name: Yuna Jung
+    ID: 300972062
+    Date: June 25 2022
+*/
+
 let contacts = require("../models/contacts");
 
 module.exports.displayContactList = (req, res, next) => {
